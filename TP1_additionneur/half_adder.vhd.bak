@@ -1,0 +1,16 @@
+library ieee ;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+-- Multiplexeur 2 vers 1
+entity MUX2 is
+port (
+a : in std_logic;
+b : in std_logic;
+s : in std_logic;
+y : out std_logic
+);
+end MUX2;
+architecture behavioral of MUX2 is
+begin
+y <= (a and not(s)) or (b and s);
+end architecture;
