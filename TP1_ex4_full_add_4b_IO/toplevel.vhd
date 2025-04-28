@@ -1,7 +1,0 @@
-entity toplevel is
-	port (
-		LEDR : out std_logic_vector(9 downto 0);
-		LEDG : out std_logic_vector(7 downto 0);
-		SW : in std_logic_vector(9 downto 0)
-	);
-end entity;
