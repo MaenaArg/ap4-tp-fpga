@@ -27,3 +27,4 @@ begin
 	LEDR(8) <= '0';
 	
 end architecture;
+
