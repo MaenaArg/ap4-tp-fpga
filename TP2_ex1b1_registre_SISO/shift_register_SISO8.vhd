@@ -22,16 +22,15 @@ begin
 	process(CLK, RSTn, SETn)
 		begin
 			if (RSTn = '0') then
-            shift_register <= "00000000";  -- reset
+            			shift_register <= "00000000";  -- reset
 				
-				elsif (SETn = '0') then
-					shift_register <= "11111111";  -- preset
-						
-				elsif rising_edge(CLK) then
-					shift_register <= Si & shift_register(7 downto 1); -- décalage à droite
-				
-        end if;
-    end process;
+			elsif (SETn = '0') then
+				shift_register <= "11111111";  -- preset
+					
+			elsif rising_edge(CLK) then
+				shift_register <= Si & shift_register(7 downto 1); -- décalage à droite	
+        		end if;
+    	end process;
 
-    So <= shift_register(0); -- bit le plus à droite
-end Behavioral;
+   	So <= shift_register(0); -- bit le plus à droite
+end behavioral;
