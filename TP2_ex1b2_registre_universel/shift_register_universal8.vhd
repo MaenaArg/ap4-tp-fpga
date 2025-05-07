@@ -53,7 +53,7 @@ begin
 				
 				-- Rotation à gauche
 				elsif (SEL = "110") then
-					shift_register <= shift_register(7) & shift_register(6 downto 0);
+					shift_register <= shift_register(6 downto 0) & shift_register(7);
 					
 				end if;
 			end if;
